@@ -100,40 +100,6 @@ class ProfileScreen extends StatelessWidget {
                           }
                         },
                       ),
-                      const Divider(height: 1),
-                      ListTile(
-                        leading:
-                            const Icon(Icons.delete_forever, color: Colors.red),
-                        title: const Text('Delete Account'),
-                        subtitle: const Text('Permanently delete your account'),
-                        onTap: () {
-                          showDialog(
-                            context: context,
-                            builder: (context) => AlertDialog(
-                              title: const Text('Delete Account'),
-                              content: const Text(
-                                'Are you sure you want to delete your account? This action cannot be undone.',
-                              ),
-                              actions: [
-                                TextButton(
-                                  onPressed: () => Navigator.pop(context),
-                                  child: const Text('Cancel'),
-                                ),
-                                TextButton(
-                                  onPressed: () async {
-                                    // TODO: Implement account deletion
-                                    Navigator.pop(context);
-                                  },
-                                  style: TextButton.styleFrom(
-                                    foregroundColor: Colors.red,
-                                  ),
-                                  child: const Text('Delete'),
-                                ),
-                              ],
-                            ),
-                          );
-                        },
-                      ),
                     ],
                   ),
                 ),
